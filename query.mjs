@@ -7,7 +7,6 @@ const prog = sade("query-caniuse");
 const outputFormats = ["tsv", "table"];
 const outputFormatsStr = outputFormats.join(", ");
 
-// TODO: config --format/-f table,copyable
 prog.version("0.0.1");
 
 prog
@@ -28,7 +27,7 @@ prog
     let featureName;
     if (URL.canParse(nameOrUrl)) {
       const url = new URL(nameOrUrl);
-      featureName = url.pathname.split("/").slice(-1);
+      featureName = url.pathname.split("/").slice(-1)[0];
     } else {
       featureName = nameOrUrl;
     }
@@ -36,7 +35,7 @@ prog
 
     switch (opts.format) {
       case "tsv": {
-        printCopyable(browsers);
+        printTsv(browsers);
         return;
       }
       case "table": {
@@ -56,6 +55,11 @@ prog.parse(process.argv);
 function findFirstBrowsersForFeature(featureName) {
   const feature = db.data[featureName];
   if (!feature) {
+    if (featureName.startsWith("mdn-")) {
+      throw new Error(
+        `Feature with id ${featureName} comes from MDN data, and is currently not available to query via caniuse-db.`
+      );
+    }
     throw new Error(`no feature with id ${featureName} found`);
   }
 
@@ -80,7 +84,7 @@ function getAgentName(agentId) {
   return db.agents[agentId].browser;
 }
 
-function printCopyable(table) {
+function printTsv(table) {
   const formatted = table.map((data) => data.join("\t")).join("\n");
   console.log(formatted);
 }
