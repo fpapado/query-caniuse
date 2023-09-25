@@ -1,14 +1,23 @@
 {
   "name": "query-caniuse",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A little CLI to query browserslist data, and output it on the terminal.",
+  "keywords": [
+    "caniuse",
+    "cli",
+    "browser-support"
+  ],
+  "author": "Fotis Papadogeorgopoulos (fotis@fpapado.com)",
+  "repository": "https://github.com/fpapado/query-caniuse",
+  "homepage": "https://github.com/fpapado/query-caniuse#readme",
+  "license": "MIT",
+  "packageManager": "pnpm@8.7.6",
+  "type": "module",
+  "main": "query.mjs",
+  "bin": "./query.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "caniuse-db": "^1.0.30001538",
     "sade": "^1.8.1"
