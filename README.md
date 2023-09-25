@@ -1,6 +1,6 @@
-# query-browserslist
+# query-caniuse
 
-A little CLI to query browserslist data, and output it on the terminal.
+A little CLI to query caniuse-db data, and output it on the terminal.
 Useful if you want to quickly copy-paste these values, e.g. in a spreadsheet or a chat.
 Data is queried locally, via [caniuse-db](npm.im/caniuse-db).
 

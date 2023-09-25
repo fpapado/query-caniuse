@@ -1,7 +1,7 @@
 {
   "name": "query-caniuse",
   "version": "0.1.0",
-  "description": "A little CLI to query browserslist data, and output it on the terminal.",
+  "description": "A little CLI to query caniuse-db data, and output it on the terminal.",
   "keywords": [
     "caniuse",
     "cli",
