@@ -1,0 +1,31 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  caniuse-db:
+    specifier: ^1.0.30001538
+    version: 1.0.30001538
+  sade:
+    specifier: ^1.8.1
+    version: 1.8.1
+
+packages:
+
+  /caniuse-db@1.0.30001538:
+    resolution: {integrity: sha512-DpDWGDG9Jk7cjISKb8Rr0RSwZTSUepMQupS1HyON5KSslZn0EZj9rBOaAm3LVGGJ5jvuDaEcJkrz8GDzV4LF9A==}
+    dev: false
+
+  /mri@1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /sade@1.8.1:
+    resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
+    engines: {node: '>=6'}
+    dependencies:
+      mri: 1.2.0
+    dev: false
