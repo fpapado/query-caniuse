@@ -1,6 +1,6 @@
 {
   "name": "query-caniuse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A little CLI to query caniuse-db data, and output it on the terminal.",
   "keywords": [
     "caniuse",
